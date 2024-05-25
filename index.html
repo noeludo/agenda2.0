@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Clientes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Agenda de Clientes</h1>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Buscar clientes...">
+        <select id="searchField">
+            <option value="name">Nombre</option>
+            <option value="phone">Teléfono</option>
+            <option value="email">Correo</option>
+        </select>
+    </div>
+    <button id="addClientBtn">Añadir Cliente</button>
+    <div id="clientsList" class="card-container"></div>
+
+    <!-- Modal para añadir cliente -->
+    <div id="addClientModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Añadir Cliente</h2>
+            <form id="addClientForm">
+                <label for="clientName">Nombre:</label>
+                <input type="text" id="clientName" name="clientName" required>
+                <label for="clientPhone">Teléfono:</label>
+                <input type="tel" id="clientPhone" name="clientPhone" required>
+                <label for="clientEmail">Correo:</label>
+                <input type="email" id="clientEmail" name="clientEmail" required>
+                <label for="clientImage">Imagen URL:</label>
+                <input type="text" id="clientImage" name="clientImage" required>
+                <input type="submit" value="Añadir Cliente">
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
